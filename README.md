@@ -6,3 +6,5 @@ z [NBP](http://api.nbp.pl) wylicza wartość.
 ## Wykorzystane technologie
 Aplikacja bazuje na AngularJS w wersji 1.5.7, [reset.css](http://meyerweb.com/eric/tools/css/reset/),
 a także [animate.css](https://github.com/daneden/animate.css)
+## Demo
+http://thelostworld.cba.pl/projekty/CurCalcWeb/index.htm
