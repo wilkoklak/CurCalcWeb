@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: WorkSans;
+	src: url('../fonts/WorkSans-Regular.ttf');
+}
+@font-face {
+	font-family: WorkSans;
+	src: url('../fonts/WorkSans-Bold.ttf');
+	font-weight: bold;
+}
+body {
+	font-family: WorkSans;
+	background: #eee;
+}
+.center {
+	padding: 1em;
+}
+.app {
+	margin-top: 5em;
+	background: #fff;
+	box-shadow: 0 2px 4px 4px rgba(0,0,0, 0.25);
+}
+.app header {
+	height: 100px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+}
+.app header .logo {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 0;
+	height: 100px;
+	padding: 0 1em;
+}
+.app header h1 {
+	line-height: 100px;
+	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+}
+.app section {
+	padding: 2em 1em 3em 1em;
+}
+.app {
+	line-height: 1.2em;
+}
+.app section div {
+	margin-bottom: 1em;
+}
+.app input, .app select {
+	width: 100%;
+	line-height: 2.5em;
+	height: 2.5em;
+	padding: 0 0.5em;
+	border: 1px solid #ddd;
+	transition: 0.5s;
+}
+.app input:focus, .app select:focus {
+	border: 1px solid #0099ff;
+}
+.app .button_center {
+	text-align: center;
+}
+.app .button_center button {
+	height: 2.5em;
+	background: #0099ff;
+	border: 0;
+	color: #f2f2f2;
+	transition: 0.5s;
+}
+.app .button_center button:hover {
+	background: #33adff;
+	cursor: pointer;
+}
+.app a {
+	color: #0099ff;
+	text-decoration: none;
+}
+.app a:hover {
+	color: #33adff;
+}
+.app footer {
+	border-top: 1px solid #ddd;
+}
+.app footer p {
+	line-height: 100px;
+	text-align: center;
+}
+
+
+@media screen and (min-width: 600px) {
+	.center {
+		padding: 0;
+		width: 540px;
+		margin: auto;
+	}
+}
+@media screen and (min-width: 768px) {
+	.center {
+		width: 720px;
+	}
+	.app .input_50 {
+		display: inline-block;
+		width: 49.5%;
+	}
+}
+@media screen and (min-width: 960px) {
+	.center {
+		width: 900px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.center {
+		width: 1140px;
+	}
+}

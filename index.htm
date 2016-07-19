@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<title>CurCalc - przeliczaj waluty kiedy chcesz!</title>
+<div class="center animated slideInUp">
+	<div ng-app="mainApp" ng-controller="mainCtrl" class="app">
+		<header>
+			<div class="logo">
+				<img src="icons/icon_64.png">
+			</div>
+			<h1>CurCalc</h1>
+		</header>
+		<section>
+			<form action="javascript:void">
+				<div class="input_50">
+					<label for="w1">Z:</label>
+					<select name="w1" ng-model="w1" ng-change="calc()">
+						<option value="">---Wybierz walutę---</option>
+						<option ng-repeat="x in waluty[0].rates" value="{{$index}}">{{ x.code }}</option>
+					</select>
+				</div>
+				<div class="input_50">
+					<label for="w2">Na:</label>
+					<select name="w2" ng-model="w2" ng-change="calc()">
+						<option value="">---Wybierz walutę---</option>
+						<option ng-repeat="x in waluty[0].rates" value="{{$index}}">{{ x.code }}</option>
+					</select>
+				</div>
+				<div class="button_center">
+					<button ng-click="changePosition()">Zamień</button>
+				</div>
+				<div class="input_100">
+					<label for="value">Wartość:</label>
+					<input type="text" name="value" ng-model="value" ng-change="calc()">
+				</div>
+				<div class="button_center">
+					<button ng-click="calc()" type="submit">Przelicz</button>
+				</div>
+			</form>
+			<div>
+				<p id="wynik">
+					Wynik:
+					<br>{{ wynik }}
+				</p>
+			</div>
+			<p>Dane z dnia: {{ waluty[0].effectiveDate }}</p>
+		</section>
+		<footer>
+			<p>&copy; 2016 <a href="http://thelostworld.cba.pl/">Artur Boryś</a></p>
+		</footer>
+	</div>
+</div>
+<script src="js/core.js"></script>
